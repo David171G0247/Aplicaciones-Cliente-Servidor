@@ -77,8 +77,8 @@ namespace Actividad_2
                 Texto = texto;
                 Color = color;
             }));
-            //OnPropertyChanged("Texto");
-            //OnPropertyChanged("Color");
+            OnPropertyChanged("Texto");
+            OnPropertyChanged("Color");
 
 
         }
