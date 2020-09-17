@@ -50,7 +50,7 @@
         <TextBlock Text="{Binding Path=Nombre2, TargetNullValue=__________}" Grid.Row="1" Grid.Column="2"></TextBlock>
         <TextBlock Grid.Row="2" >PUNTOS</TextBlock>
         <TextBlock Grid.Row="2" Grid.Column="2">PUNTOS</TextBlock>
-        <TextBlock Foreground="{Binding Path=Color1, TargetNullValue=red}" Text="{Binding Puntos1}" Grid.Row="3" Grid.Column="0" Grid.RowSpan="2" Height="auto" FontSize="100">1</TextBlock>
-        <TextBlock Foreground="{Binding Path=Color2, TargetNullValue=blue}" Text="{Binding Puntos2}" Grid.Row="3" Grid.Column="2" Grid.RowSpan="2" Height="auto" FontSize="100">1</TextBlock>
+        <TextBlock Foreground="{Binding Path=Color1, TargetNullValue=red}" Text="{Binding Puntos1}" Grid.Row="3" Grid.Column="0" Grid.RowSpan="2" Height="auto" FontSize="100"></TextBlock>
+        <TextBlock Foreground="{Binding Path=Color2, TargetNullValue=blue}" Text="{Binding Puntos2}" Grid.Row="3" Grid.Column="2" Grid.RowSpan="2" Height="auto" FontSize="100"></TextBlock>
     </Grid>
 </Window>
