@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Actividad 3</title>
+</head>
+<body>
+    <h1>Desarrollo de aplicaciones cliente/servidor</h1>
+    <h2>Actividad 3</h2>
+    <fieldset title="Puntuajes">
+        <form method="post" action="/actividad3/">
+            <input type="submit" name="puntos" value="Puntos1">
+            <input type="submit" name="puntos" value="Puntos2" />
+            <br /><br />
+            <label>Cambiar de Round</label><br />
+            <input type="submit" name="puntos" value="Round" />
+            <br /><br />
+        </form>
+    </fieldset>
+    <br />
+    <form method="get" action="/actividad3/actualizar">
+        <fieldset>
+            <label>Nombre</label><br />
+            <input type="text" name="Nombre1" /><br />
+            <label>Color de su esquina</label><br />
+            <input type="color" name="Color1" />
+        </fieldset>
+        <br />
+        <fieldset >
+            <label>Nombre </label><br />
+            <input type="text" name="Nombre2" />
+            <label>Color de su esquina</label><br />
+            <input type="color" name="Color2" />
+        </fieldset>
+        <br /><br />
+        <input type="submit" value="Aceptar" />
+    </form>
+</body>
+</html>

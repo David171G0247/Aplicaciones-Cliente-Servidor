@@ -1,0 +1,56 @@
+﻿<Window x:Class="Actividad3.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Actividad3"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="1100" MinWidth="1100">
+    <Grid Background="Black">
+        <Grid.Resources>
+            <Style TargetType="TextBlock">
+                <Setter Property="Width" Value="305"/>
+                <Setter Property="Height" Value="50"/>
+                <Setter Property="Foreground" Value="White"/>
+                <Setter Property="Background" Value="Black"/>
+                <Setter Property="HorizontalAlignment" Value="Center"/>
+                <Setter Property="VerticalAlignment" Value="Center"/>
+                <Setter Property="FontSize" Value="26"/>
+                <Setter Property="TextAlignment" Value="Center"/>
+                <Setter Property="FontFamily" Value="Arial Black"/>
+                <Setter Property="Margin" Value="0,35,0,0"></Setter>
+            </Style>
+        </Grid.Resources>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+
+        </Grid.RowDefinitions>
+        <Border Background="{Binding Path=Color1, TargetNullValue=red}" CornerRadius="50" Grid.RowSpan="5"></Border>
+        <Border Background="{Binding Path=Color2, TargetNullValue=blue}" CornerRadius="50" Grid.Column="2" Grid.RowSpan="5"></Border>
+        <TextBlock>ESQUINA IZQUIERDA</TextBlock>
+        <UniformGrid Grid.Column="1" Columns="3">
+            <Image Margin="10" Source="Images/SBL.png"></Image>
+            <TextBlock Grid.Column="1" FontSize="30">ROUND</TextBlock>
+            <Image Margin="10" Source="Images/SBL.png"></Image>
+        </UniformGrid>
+        <TextBlock Grid.Column="2">ESQUINA DERECHA</TextBlock>
+        <TextBlock Text="{Binding Path=Nombre1, TargetNullValue=__________}" Grid.Row="1"></TextBlock>
+        <Border BorderBrush="Yellow" BorderThickness="8" Margin="10" Grid.Row="1" Grid.Column="1" Grid.RowSpan="3">
+            <TextBlock Text="{Binding Round, FallbackValue=1}" Margin="0" FontSize="200" Height="auto" FontWeight="Bold"></TextBlock>
+        </Border>
+        <TextBlock Text="{Binding Path=Nombre2, TargetNullValue=__________}" Grid.Row="1" Grid.Column="2"></TextBlock>
+        <TextBlock Grid.Row="2" >PUNTOS</TextBlock>
+        <TextBlock Grid.Row="2" Grid.Column="2">PUNTOS</TextBlock>
+        <TextBlock Foreground="{Binding Path=Color1, TargetNullValue=red}" Text="{Binding Puntos1}" Grid.Row="3" Grid.Column="0" Grid.RowSpan="2" Height="auto" FontSize="100">1</TextBlock>
+        <TextBlock Foreground="{Binding Path=Color2, TargetNullValue=blue}" Text="{Binding Puntos2}" Grid.Row="3" Grid.Column="2" Grid.RowSpan="2" Height="auto" FontSize="100">1</TextBlock>
+    </Grid>
+</Window>
