@@ -1,0 +1,72 @@
+﻿<Window x:Class="Actividad4.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Actividad4"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="500" Width="800">
+    <DockPanel Background="AliceBlue">
+        <Border DockPanel.Dock="Top" Background="#FF239DBD" Margin="10" CornerRadius="10">
+            <Grid>
+                <Image Margin="-53,10,0,10" Source="Images/aeroplano.png" Width="50" Height="50" HorizontalAlignment="Left" RenderTransformOrigin="0.5,0.5" >
+                    <Image.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleX="-1"/>
+                            <TranslateTransform X="60"/>
+                        </TransformGroup>
+                    </Image.RenderTransform>
+                </Image>
+                <Label HorizontalAlignment="Center" VerticalAlignment="Center" Width="auto" FontWeight="Medium" FontSize="32">Salidas y llegadas</Label>
+                <Image Margin="10" Source="Images/aeroplano.png" Width="50" Height="50" HorizontalAlignment="Right"></Image>
+            </Grid>
+
+        </Border>
+        <StackPanel Margin="8" DockPanel.Dock="Left" Width="300">
+            <StackPanel.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="Margin" Value="10"></Setter>
+                    <Setter Property="Background" Value="#FF239DBD"></Setter>
+                    <Setter Property="BorderBrush" Value="Black"></Setter>
+                    <Setter Property="BorderThickness" Value="1"></Setter>
+                    <Setter Property="CornerRadius" Value="10"></Setter>
+                </Style>
+                <Style TargetType="Button">
+                    <Setter Property="Padding" Value="5"></Setter>
+                    <Setter Property="FontSize" Value="13"></Setter>
+                    <Setter Property="FontWeight" Value="Bold"></Setter>
+                    <Setter Property="Background" Value="Transparent"></Setter>
+                    <Setter Property="BorderThickness" Value="0"></Setter>
+                </Style>
+                <Style TargetType="Label">
+                    <Setter Property="Margin" Value="10 5 0 -5"></Setter>
+                    <Setter Property="FontWeight" Value="SemiBold"></Setter>
+                    <Setter Property="FontSize" Value="13"></Setter>
+
+                </Style>
+                <Style TargetType="TextBox">
+                    <Setter Property="Margin" Value="10 0 10 0"></Setter>
+                </Style>
+            </StackPanel.Resources>
+            <Label>Hora</Label>
+            <TextBox Name="txtHora" Text="{Binding Hora}"></TextBox>
+            <Label>Destino</Label>
+            <TextBox Name="txtDestino" Text="{Binding Destino}"></TextBox>
+            <Label>Vuelo</Label>
+            <TextBox Name="txtVuelo" Text="{Binding Vuelo}"></TextBox>
+            <Label>Estado</Label>
+            <ComboBox Margin="10 0 10 0" Name="cmbEstado" SelectedValue="{Binding Estado}"></ComboBox>
+            <Border BorderBrush="Black" BorderThickness="1" Margin="0 20 0 10"></Border>
+            <Border>
+                <Button Content="Agregar" Name="Agregar" Click="Agregar_Click"></Button>
+            </Border>
+            <Border>
+                <Button Content="Editar" Name="Editar" Click="Editar_Click"></Button>
+            </Border>
+            <Border>
+                <Button Content="Eliminar" Name="Eliminar" Click="Eliminar_Click"></Button>
+            </Border>
+        </StackPanel>
+        <DataGrid Background="#FFB9B6BD" Name="dtgDatos" SelectionChanged="dtgDatos_SelectionChanged" Margin="10"></DataGrid>
+    </DockPanel>
+</Window>
